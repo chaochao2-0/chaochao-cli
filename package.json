@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/chaochao2-0/chaochao-cli/issues"
   },
-  "homepage": "https://github.com/chaochao2-0/chaochao-cli#readme"
+  "homepage": "https://github.com/chaochao2-0/chaochao-cli#readme",
+  "bin": {
+    "chaochao-cli": "lib/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.9",
+    "typescript": "^5.1.6"
+  }
 }
