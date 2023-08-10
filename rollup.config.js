@@ -25,6 +25,7 @@ const entryConfig = [
             {
                 file: './lib/index.js',
                 format: 'esm',
+                banner: '#!/usr/bin/env node'
             },
         ],
         plugins: commonPlugin,

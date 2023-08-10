@@ -20,8 +20,11 @@
   },
   "homepage": "https://github.com/chaochao2-0/chaochao-cli#readme",
   "bin": {
-    "cb": "lib/index.js"
+    "chaochao-cli": "lib/index.js"
   },
+  "files": [
+    "lib"
+  ],
   "devDependencies": {
     "@antfu/eslint-config": "^0.40.2",
     "@rollup/plugin-babel": "^6.0.3",
