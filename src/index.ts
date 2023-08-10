@@ -20,7 +20,7 @@ program
     .command('init <name>')
     .description('新建项目')
     .action(async (name: string) => {
-        console.log('测试一下init命令', name)
+        downloadPath = name
         const initOptions = await inquirer.prompt(InitPrompts)
         console.log('initOptions', initOptions)
         try {
