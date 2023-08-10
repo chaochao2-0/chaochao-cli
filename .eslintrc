@@ -1,0 +1,12 @@
+{
+    "extends": "@antfu",
+    "rules": {
+        // 关闭定义变量转为const
+        "prefer-const":"off",
+        // 保存代码时缩进4个空格
+        "indent":["error", 4],
+        "@typescript-eslint/indent": ["error", 4],
+        // 允许使用console
+        "no-console":"off"
+    }
+}

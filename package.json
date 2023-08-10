@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:fix": "eslint --fix --ext .ts ."
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,9 @@
     "chaochao-cli": "lib/index.js"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.40.2",
     "@types/node": "^20.4.9",
+    "eslint": "^8.46.0",
     "typescript": "^5.1.6"
   }
 }
