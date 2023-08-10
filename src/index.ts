@@ -1,5 +1,6 @@
 import { Command } from 'commander'
 import inquirer from 'inquirer'
+import { downloadTemplate } from './download'
 
 const InitPrompts = [
     {
@@ -9,6 +10,8 @@ const InitPrompts = [
         choices: ['vue', 'react', 'flutter'],
     },
 ]
+const templateGitUrl = 'https://github.com/luciozhang/koa-ts-template.git'
+let downloadPath: any = null
 
 const program = new Command()
 program.version('1.0.0')
@@ -20,6 +23,12 @@ program
         console.log('测试一下init命令', name)
         const initOptions = await inquirer.prompt(InitPrompts)
         console.log('initOptions', initOptions)
+        try {
+            await downloadTemplate(name, templateGitUrl, downloadPath)
+        }
+        catch (error) {
+            console.error(error)
+        }
     })
 
 program.parse()
