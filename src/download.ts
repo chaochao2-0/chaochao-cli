@@ -8,7 +8,7 @@ export function downloadTemplate(name: string, templateGitUrl: string, downloadP
     return new Promise(async (resolve, reject) => {
         try {
             loading.start('start download template')
-            await gitclone(templateGitUrl, downloadPath, { checkout: 'master', shallow: true })
+            await gitclone(templateGitUrl, downloadPath)
             fs.removeSync(path.join(downloadPath, '.git'))
             loading.stop()
             loading.succeed('download success')
@@ -17,7 +17,7 @@ export function downloadTemplate(name: string, templateGitUrl: string, downloadP
         catch (error) {
             reject(error)
             loading.stop()
-            loading.fail('download fail')
+            loading.fail('download fail', error)
         }
     })
 }

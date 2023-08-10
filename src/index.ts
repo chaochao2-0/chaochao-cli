@@ -10,7 +10,7 @@ const InitPrompts = [
         choices: ['vue', 'react', 'flutter'],
     },
 ]
-const templateGitUrl = 'https://github.com/luciozhang/koa-ts-template.git'
+const templateGitUrl = 'https://gitee.com/chaochao2_0/vue3.0_test.git'
 let downloadPath: any = null
 
 const program = new Command()
