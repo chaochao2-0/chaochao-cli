@@ -8,7 +8,9 @@ export function downloadTemplate(name: string, templateGitUrl: string, downloadP
     return new Promise(async (resolve, reject) => {
         try {
             loading.start('start download template')
-            await gitclone(templateGitUrl, downloadPath)
+            await gitclone(templateGitUrl, downloadPath, {
+                checkout: 'vue3', // 指定分支
+            })
             fs.removeSync(path.join(downloadPath, '.git'))
             loading.stop()
             loading.succeed('download success')

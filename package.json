@@ -5,7 +5,7 @@
   "main": "./lib/index.js",
   "type": "module",
   "scripts": {
-    "build": "rollup -c --environment config:Entry",
+    "build": "rollup -c --environment config:Entry && node ./lib/index.js init wakk",
     "lint:fix": "eslint --fix --ext .ts ."
   },
   "repository": {
